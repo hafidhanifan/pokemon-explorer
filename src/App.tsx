@@ -7,7 +7,7 @@ import Explorer from "./pages/Explorer";
 function App() {
   return (
     <GradientBg className="min-w-screen min-h-screen">
-      <Navbar />
+      {/* <Navbar /> */}
 
       <Routes>
         <Route path="/" element={<Home />} />
