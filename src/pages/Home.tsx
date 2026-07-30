@@ -7,13 +7,30 @@ function Home() {
       <div className="grid grid-cols-3 w-full h-full">
         {/* Left Card */}
         <div className="h-full col-span-2 flex justify-center border-2 border-rose-600">
-          <BlobCard
-            bgImage="/images/left-card.svg"
-            className="h-full aspect-1045/943"
-          >
-            {/* <h2 className="text-3xl font-bold">Gyarados</h2> */}
-            {/* <img src="/pokemon/gyarados.png" alt="Gyarados" className="w-32" /> */}
-          </BlobCard>
+          <div className="relative h-full aspect-1045/943">
+            {/* Mushroom icon - tetep di luar/pojok, biarin nongol keluar dikit */}
+            <img
+              src="/images/mushroom.svg"
+              alt="Mushroom"
+              className="absolute top-3 left-2 w-12 h-12 z-20"
+            />
+
+            {/* Navbar - masuk ke dalam card */}
+            <nav className="absolute top-2 left-20 right-6 h-14 bg-white rounded-full flex items-center px-6 z-10">
+              <ul className="flex gap-12 font-cereal text-xl">
+                <li>Home</li>
+                <li className="font-pixel text-stroke-black text-transparent bg-clip-text bg-linear-to-r from-[#00E3B5] to-[#F9C62C]">
+                  Explorer
+                </li>
+                <li>About</li>
+              </ul>
+            </nav>
+
+            <BlobCard
+              bgImage="/images/left-card.svg"
+              className="w-full h-full"
+            />
+          </div>
         </div>
 
         {/* Right Card */}

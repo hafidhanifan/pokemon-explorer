@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 @import "tailwindcss";
 
 @font-face {
@@ -18,4 +19,10 @@
 
 @theme {
   --font-cereal: "Airbnb Cereal", sans-serif;
+  --font-pixel: "Press Start 2P", cursive;
+}
+
+@utility text-stroke-black {
+  -webkit-text-stroke: 1px #131313;
+  text-stroke: 1px #131313;
 }
