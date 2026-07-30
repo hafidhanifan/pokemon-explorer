@@ -1,9 +1,21 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Airbnb Cereal";
+  src: url("/fonts/airbnb-cereal.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @layer base {
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+}
+
+@theme {
+  --font-cereal: "Airbnb Cereal", sans-serif;
 }
