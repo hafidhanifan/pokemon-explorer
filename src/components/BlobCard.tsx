@@ -11,7 +11,7 @@ export default function BlobCard({
 }: BlobCardProps) {
   return (
     <div
-      className={`relative bg-contain bg-no-repeat ${className}`}
+      className={`relative bg-cover bg-no-repeat ${className}`}
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="relative z-10 p-6 h-full">{children}</div>
