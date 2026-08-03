@@ -3,10 +3,10 @@ import RightCard from "../components/RightCard";
 
 function Home() {
   return (
-    <div className="w-screen h-screen px-60 py-17">
+    <div className="w-screen h-screen px-60 py-10">
       <div className="grid grid-cols-3 w-full h-full">
         {/* Left Card */}
-        <div className="h-full col-span-2 flex justify-center border-2 border-rose-600">
+        <div className="h-full col-span-2 flex justify-center">
           <div className="relative h-full aspect-1045/943">
             {/* Mushroom icon - tetep di luar/pojok, biarin nongol keluar dikit */}
             <img
@@ -28,41 +28,65 @@ function Home() {
 
             <BlobCard
               bgImage="/images/left-card.svg"
-              className="w-full h-full relative p-5"
+              className="w-full h-full relative"
             >
-              <div
-                className="w-1/2 h-[553px] bg-contain bg-no-repeat absolute bottom-34 left-0"
-                style={{
-                  backgroundImage: "url('images/purple-inside-card.svg')",
-                }}
-              >
-                <div className="relative">
-                  <h1 className="font-cereal text-5xl ml-5 mt-2">Gyarados</h1>
+              {/* Inside card wrapper */}
+              <div className="h-[533px] grid grid-cols-[2.2fr_1fr_1fr] gap-2 mt-[8%]">
+                {/* Gyarados card */}
+                <div
+                  className="w-full h-full bg-contain bg-no-repeat relative"
+                  style={{
+                    backgroundImage: "url('images/purple-inside-card.svg')",
+                  }}
+                >
+                  <div className="relative">
+                    <h1 className="font-cereal text-5xl ml-5 mt-2">Gyarados</h1>
 
-                  {/* Arrow icon */}
+                    {/* Arrow icon */}
+                    <img
+                      src="/images/arrow.svg"
+                      alt="Arrow icon"
+                      className="absolute right-2 top-1"
+                    />
+                  </div>
+
                   <img
-                    src="/images/arrow.svg"
-                    alt="Arrow icon"
-                    className="absolute right-2 top-1"
+                    src="images/gyarados.svg"
+                    alt="Gyarados image"
+                    className="absolute -left-10"
                   />
+
+                  <span className="font-pixel text-xl -rotate-90 absolute bottom-30 left-4">
+                    $49
+                  </span>
                 </div>
 
-                <img
-                  src="images/gyarados.svg"
-                  alt="Gyarados image"
-                  className="absolute -left-10"
-                />
+                {/* Raichu card */}
+                <div
+                  className="w-full h-full bg-contain bg-no-repeat"
+                  style={{
+                    backgroundImage: "url('images/raichu-card.svg')",
+                  }}
+                >
+                  <img src="images/raichu-img.svg" alt="" />
+                </div>
 
-                <span className="font-pixel text-xl -rotate-90 absolute bottom-36 left-4">
-                  $49
-                </span>
+                {/* Guess who card */}
+                <div
+                  className="w-full h-full bg-contain bg-no-repeat"
+                  style={{
+                    backgroundImage: "url('images/guess-card.svg')",
+                  }}
+                >
+                  <img src="images/guess-img.svg" alt="" />
+                </div>
               </div>
             </BlobCard>
           </div>
         </div>
 
         {/* Right Card */}
-        <div className="border-2 border-blue-600 h-full flex flex-col items-center">
+        <div className="h-full flex flex-col items-center">
           <div className="bg-white p-5 rounded-[20px] mb-2 shrink-0 w-75">
             <p className="font-cereal text-xl">
               Welcome to Pokémon Explorer. Here, you'll find three
