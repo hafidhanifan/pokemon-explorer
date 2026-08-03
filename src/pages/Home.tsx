@@ -28,8 +28,36 @@ function Home() {
 
             <BlobCard
               bgImage="/images/left-card.svg"
-              className="w-full h-full"
-            />
+              className="w-full h-full relative p-5"
+            >
+              <div
+                className="w-1/2 h-[553px] bg-contain bg-no-repeat absolute bottom-34 left-0"
+                style={{
+                  backgroundImage: "url('images/purple-inside-card.svg')",
+                }}
+              >
+                <div className="relative">
+                  <h1 className="font-cereal text-5xl ml-5 mt-2">Gyarados</h1>
+
+                  {/* Arrow icon */}
+                  <img
+                    src="/images/arrow.svg"
+                    alt="Arrow icon"
+                    className="absolute right-2 top-1"
+                  />
+                </div>
+
+                <img
+                  src="images/gyarados.svg"
+                  alt="Gyarados image"
+                  className="absolute -left-10"
+                />
+
+                <span className="font-pixel text-xl -rotate-90 absolute bottom-36 left-4">
+                  $49
+                </span>
+              </div>
+            </BlobCard>
           </div>
         </div>
 
