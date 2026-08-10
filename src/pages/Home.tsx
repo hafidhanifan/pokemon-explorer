@@ -131,7 +131,7 @@ function Home() {
 
         {/* Right Card */}
         <div className="h-full flex flex-col items-center">
-          <div className="bg-white p-5 rounded-[20px] mb-2 shrink-0 w-75">
+          <div className="bg-white p-5 rounded-[20px] mb-2 shrink-0 w-86">
             <p className="font-cereal text-xl">
               Welcome to Pokémon Explorer. Here, you'll find three
               features—Search and Pokémon Details—along with over 20 Pokémon for
@@ -142,10 +142,7 @@ function Home() {
             <RightCard
               bgImage="/images/right-card.svg"
               className="h-full aspect-335/658"
-            >
-              {/* <h2 className="text-3xl font-bold">Gyarados</h2> */}
-              {/* <img src="/pokemon/gyarados.png" alt="Gyarados" className="w-32" /> */}
-            </RightCard>
+            ></RightCard>
           </div>
         </div>
       </div>
