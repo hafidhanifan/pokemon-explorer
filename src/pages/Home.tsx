@@ -133,7 +133,7 @@ function Home() {
                 captivating game collection
               </p>
             </div>
-            <div className="absolute b">
+            <div className="absolute bottom-0 right-0 z-20">
               <img src="/images/floating-text.svg" alt="" />
             </div>
           </div>
