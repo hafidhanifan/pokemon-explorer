@@ -126,12 +126,19 @@ function Home() {
                 </div>
               </div>
             </BlobCard>
+            <div className="absolute bottom-3 flex flex-col gap-5">
+              <p className="font-cereal text-6xl">Unleash your</p>
+              <p className="font-cereal text-6xl">pixel passion with</p>
+              <p className="font-cereal text-6xl">
+                captivating game collection
+              </p>
+            </div>
           </div>
         </div>
 
         {/* Right Card */}
         <div className="h-full flex flex-col items-center">
-          <div className="bg-white p-5 rounded-[20px] mb-2 shrink-0 w-86">
+          <div className="bg-white p-5 rounded-[20px] mb-2 shrink-0 w-86.5">
             <p className="font-cereal text-xl">
               Welcome to Pokémon Explorer. Here, you'll find three
               features—Search and Pokémon Details—along with over 20 Pokémon for
