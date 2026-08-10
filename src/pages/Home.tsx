@@ -151,8 +151,14 @@ function Home() {
           <div className="flex-1 min-h-0 flex justify-center">
             <RightCard
               bgImage="/images/right-card.svg"
-              className="h-full aspect-335/658"
-            ></RightCard>
+              className="h-full aspect-335/658 relative"
+            >
+              <img
+                src="/images/mouse.svg"
+                alt="mouse image"
+                className="absolute bottom-0 left-33"
+              />
+            </RightCard>
           </div>
         </div>
       </div>
