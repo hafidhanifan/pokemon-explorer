@@ -1,5 +1,6 @@
 import BlobCard from "../components/BlobCard";
 import RightCard from "../components/RightCard";
+import { Link } from "react-router";
 
 function Home() {
   return (
@@ -16,11 +17,18 @@ function Home() {
             />
 
             {/* Navbar - masuk ke dalam card */}
-            <nav className="absolute top-2 left-20 right-6 h-14 bg-white rounded-full flex items-center px-6 z-10">
+            <nav className="absolute top-2 left-20 right-6 h-14 bg-white rounded-full flex items-center px-6 z-50">
               <ul className="flex gap-12 font-cereal text-xl">
-                <li>Home</li>
-                <li className="font-pixel text-stroke-black text-transparent bg-clip-text bg-linear-to-r from-[#00E3B5] to-[#F9C62C]">
-                  Explorer
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link
+                    to="/explorer"
+                    className="font-pixel text-stroke-black text-transparent bg-clip-text bg-linear-to-r from-[#00E3B5] to-[#F9C62C]"
+                  >
+                    Explorer
+                  </Link>
                 </li>
                 <li>About</li>
               </ul>
