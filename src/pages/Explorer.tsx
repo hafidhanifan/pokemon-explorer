@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import type { types } from "util";
+import CloseIcon from "../components/CloseIcon";
 
 type Pokemons = {
   name: string;
@@ -55,6 +56,7 @@ function PokemonList() {
   }, [selectedUrl]);
 
   console.log(detail);
+
   return (
     <div className="w-1/2 mx-auto min-h-screen flex items-center justify-center">
       {pokemons ? (
@@ -73,6 +75,28 @@ function PokemonList() {
         </div>
       ) : (
         <p>Loading...</p>
+      )}
+
+      {selectedUrl && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center">
+          <div className="relative bg-white rounded-2xl p-8 min-w-80">
+            <button
+              onClick={() => {
+                setDetail(null);
+                setSelectedUrl(null);
+              }}
+              className="absolute w-8 right-3 top-3 text-slate-500 hover:text-slate-800"
+            >
+              <CloseIcon />
+            </button>
+
+            {detail ? (
+              <p className="text-3xl">{detail.name}</p>
+            ) : (
+              <p className="text-slate-400">Loading...</p>
+            )}
+          </div>
+        </div>
       )}
     </div>
   );
