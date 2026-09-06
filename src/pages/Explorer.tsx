@@ -27,6 +27,8 @@ type DetailPokemons = {
 function PokemonList() {
   const [pokemons, setPokemons] = useState<Pokemons[] | null>(null);
   const [selectedUrl, setSelectedUrl] = useState<string | null>(null);
+  const [detail, setDetail] = useState<DetailPokemons | null>(null);
+
   useEffect(() => {
     async function getData() {
       const response = await fetch(
@@ -34,11 +36,11 @@ function PokemonList() {
       );
       const data = await response.json();
       setPokemons(data.results);
-      console.log(data.results);
     }
     getData();
   }, []);
 
+  // make url for each pokemon
   useEffect(() => {
     const url: string | null = selectedUrl;
 
@@ -46,12 +48,13 @@ function PokemonList() {
       if (url) {
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data);
+        setDetail(data);
       }
     }
     getData();
   }, [selectedUrl]);
 
+  console.log(detail);
   return (
     <div className="w-1/2 mx-auto min-h-screen flex items-center justify-center">
       {pokemons ? (
