@@ -91,7 +91,30 @@ function PokemonList() {
             </button>
 
             {detail ? (
-              <p className="text-3xl">{detail.name}</p>
+              <div className="flex flex-col items-center gap-3">
+                <img
+                  src={detail.sprites.other["official-artwork"].front_default}
+                  alt={detail.name}
+                  className="w-48 h-48"
+                />
+
+                <p className="text-3xl font-bold capitalize">{detail.name}</p>
+
+                <div className="flex gap-6 text-slate-600">
+                  <p>Height: {detail.height / 10} m</p>
+                  <p>Weight: {detail.weight / 10} kg</p>
+                </div>
+                <div className="flex gap-2">
+                  {detail.types.map((t) => (
+                    <span
+                      key={t.type.name}
+                      className="px-3 py-1 rounded-full bg-slate-200 capitalize"
+                    >
+                      {t.type.name}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ) : (
               <p className="text-slate-400">Loading...</p>
             )}
